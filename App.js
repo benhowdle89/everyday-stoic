@@ -1,25 +1,36 @@
 import React from "react";
-import { View } from "react-native";
-import findQuote from "./lib/model";
-import Quote from "./components/quote";
-import styled from "styled-components";
+import { AppLoading } from "expo";
+import { Provider } from "react-redux";
 
-const StyledWrapperView = styled.View`
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-`;
+import configureStore from "./lib/store";
+
+import Home from "./containers/home";
 
 export default class App extends React.Component {
   state = {
-    currentQuote: findQuote()
+    isReady: false,
+    store: null
+  };
+  _setupStore = async () => {
+    return new Promise(async resolve => {
+      const store = await configureStore();
+      this.setState({ store }, resolve);
+    });
   };
   render() {
-    const { currentQuote } = this.state;
+    if (!this.state.isReady) {
+      return (
+        <AppLoading
+          startAsync={this._setupStore}
+          onFinish={() => this.setState({ isReady: true })}
+          onError={console.warn}
+        />
+      );
+    }
     return (
-      <StyledWrapperView>
-        <Quote quote={currentQuote} />
-      </StyledWrapperView>
+      <Provider store={this.state.store}>
+        <Home />
+      </Provider>
     );
   }
 }
