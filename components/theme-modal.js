@@ -12,11 +12,12 @@ const StyledModalView = styled.View`
 const StyledThemeView = styled.TouchableOpacity`
   background-color: ${props => props.theme.background};
   margin: 10px;
-  padding: 10px;
+  padding: 15px;
   position: relative;
 `;
 const StyledThemeText = styled(Text)`
   color: ${props => props.theme.text};
+  font-size: 16;
 `;
 
 const StyledActiveIcon = styled(Ionicons)`

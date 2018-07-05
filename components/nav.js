@@ -6,7 +6,7 @@ import DatePicker from "./date-picker";
 const StyledNavView = styled.View`
   justify-content: flex-end;
   flex-direction: row;
-  background: #000;
+  background: #111;
   padding-horizontal: 10px;
   padding-vertical: 10px;
 `;
@@ -35,7 +35,6 @@ export default class Nav extends Component {
   };
   render() {
     const { otherDate, todaySelected } = this.props;
-    console.log(todaySelected);
     return (
       <StyledNavView>
         <Button
@@ -45,7 +44,7 @@ export default class Nav extends Component {
         >
           Today
         </Button>
-        <Button onPress={this._handleOtherDatePress}>Previous</Button>
+        <Button onPress={this._handleOtherDatePress}>More</Button>
         {!!this.state.showDatePicker && (
           <DatePicker
             otherDate={otherDate}

@@ -56,7 +56,6 @@ class Home extends Component {
 
 const mapStateToProps = state => {
   const { theme, todaySelected, otherDate, themes } = state;
-  console.log(theme);
   const currentQuote = getCurrentQuote(
     state,
     !todaySelected && otherDate ? otherDate : undefined

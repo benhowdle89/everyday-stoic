@@ -22,6 +22,15 @@ export default class Picker extends Component {
         showIcon={false}
         ref={ref => (this.datePickerRef = ref)}
         onDateChange={onChange}
+        customStyles={{
+          btnTextConfirm: {
+            color: "#111",
+            fontFamily: "Avenir Next"
+          },
+          btnTextCancel: {
+            fontFamily: "Avenir Next"
+          }
+        }}
       />
     );
   }

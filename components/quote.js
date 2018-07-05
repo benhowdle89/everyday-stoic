@@ -5,6 +5,7 @@ import format from "date-fns/format";
 import { Ionicons } from "@expo/vector-icons";
 import Text from "./text";
 import ThemeModal from "./theme-modal";
+import InfoModal from "./info-modal";
 
 const StyledBGView = styled.View`
   background-color: ${props => props.theme.background};
@@ -16,13 +17,13 @@ const StyledBGView = styled.View`
 const QuoteText = styled(Text)`
   color: ${props => props.theme.text};
   font-size: 18;
-  margin-top: 20;
+  margin-top: 30;
 `;
 
 const MetaView = styled.View`
   justify-content: space-between;
   flex-direction: row;
-  margin-top: 20;
+  margin-top: 30;
 `;
 
 const QuoteAuthorText = styled(Text)`
@@ -32,18 +33,22 @@ const QuoteAuthorText = styled(Text)`
 
 const QuoteSourceText = styled(Text)`
   color: ${props => props.theme.text};
-  font-style: italic;
 `;
 
 const DateText = styled(Text)`
   color: ${props => props.theme.text};
   text-decoration-line: underline;
-  font-size: 12;
+  font-size: 14;
 `;
 
 const StyledThemeButton = styled.TouchableOpacity`
+  margin-horizontal: 10;
+`;
+
+const ButtonsView = styled.View`
   align-self: center;
-  margin-top: 30;
+  margin-top: 60;
+  flex-direction: row;
 `;
 
 const formatDate = date => {
@@ -55,12 +60,18 @@ export default class Quote extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showThemeModal: false
+      showThemeModal: false,
+      showInfoModal: false
     };
   }
   _handleThemePress = () => {
     this.setState({
-      showThemeModal: !this.state.showThemeModal
+      showThemeModal: true
+    });
+  };
+  _handleInfoPress = () => {
+    this.setState({
+      showInfoModal: true
     });
   };
   _handleThemeModalClose = theme => {
@@ -71,6 +82,11 @@ export default class Quote extends Component {
       showThemeModal: false
     });
   };
+  _handleInfoModalClose = () => {
+    this.setState({
+      showInfoModal: false
+    });
+  };
   render() {
     const {
       quote: { text, author, source },
@@ -79,7 +95,7 @@ export default class Quote extends Component {
       themes,
       theme
     } = this.props;
-    const { showThemeModal } = this.state;
+    const { showThemeModal, showInfoModal } = this.state;
     return (
       <StyledBGView {...this.props}>
         <DateText {...this.props}>{formatDate(otherDate)}</DateText>
@@ -90,14 +106,27 @@ export default class Quote extends Component {
           </QuoteAuthorText>
           <QuoteSourceText {...this.props}>{source}</QuoteSourceText>
         </MetaView>
-        <StyledThemeButton onPress={this._handleThemePress}>
-          <Ionicons name="md-eye" size={32} color={theme.text} />
-        </StyledThemeButton>
+        <ButtonsView>
+          <StyledThemeButton onPress={this._handleThemePress}>
+            <Ionicons name="ios-color-palette" size={32} color={theme.text} />
+          </StyledThemeButton>
+          <StyledThemeButton onPress={this._handleInfoPress}>
+            <Ionicons
+              name="ios-information-circle"
+              size={32}
+              color={theme.text}
+            />
+          </StyledThemeButton>
+        </ButtonsView>
         <ThemeModal
           onClose={this._handleThemeModalClose}
           visible={showThemeModal}
           currentThemeIndex={currentThemeIndex}
           themes={themes}
+        />
+        <InfoModal
+          onClose={this._handleInfoModalClose}
+          visible={showInfoModal}
         />
       </StyledBGView>
     );
