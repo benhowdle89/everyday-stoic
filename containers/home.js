@@ -17,6 +17,7 @@ const StyledWrapperView = styled.View`
 
 const StatusBarPaddingIOS = styled.View`
   height: ${statusBarHeight};
+  background: #111;
 `;
 
 class Home extends Component {
