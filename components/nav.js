@@ -44,7 +44,7 @@ export default class Nav extends Component {
         >
           Today
         </Button>
-        <Button onPress={this._handleOtherDatePress}>More</Button>
+        <Button onPress={this._handleOtherDatePress}>Past</Button>
         {!!this.state.showDatePicker && (
           <DatePicker
             otherDate={otherDate}
