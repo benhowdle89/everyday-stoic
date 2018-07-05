@@ -23,7 +23,7 @@ const HeadingText = styled(Text)`
 const BodyText = styled(Text)`
   font-size: 16px;
   color: #111;
-  margin-top: 20px;
+  margin-top: 10px;
   ${props => props.link && `text-decoration-line: underline;`};
 `;
 

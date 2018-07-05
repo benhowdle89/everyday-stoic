@@ -1,8 +1,11 @@
 import React, { Component } from "react";
+import { Dimensions } from "react-native";
 import Modal from "react-native-modal";
 import styled from "styled-components";
 import { Ionicons } from "@expo/vector-icons";
 import Text from "./text";
+
+const { width } = Dimensions.get("window");
 
 const StyledModalView = styled.View`
   justify-content: center;
@@ -14,6 +17,7 @@ const StyledThemeView = styled.TouchableOpacity`
   margin: 10px;
   padding: 15px;
   position: relative;
+  width: ${width * 0.75};
 `;
 const StyledThemeText = styled(Text)`
   color: ${props => props.theme.text};
