@@ -19,6 +19,7 @@ export default class Picker extends Component {
         format="YYYY-MM-DD"
         confirmBtnText="Confirm"
         cancelBtnText="Cancel"
+        maxDate={new Date()}
         showIcon={false}
         ref={ref => (this.datePickerRef = ref)}
         customStyles={{

@@ -30,7 +30,7 @@ class Home extends Component {
           setOtherDate={setOtherDate}
           setToday={setToday}
         />
-        <Quote theme={theme} quote={quote} />
+        <Quote otherDate={otherDate} theme={theme} quote={quote} />
       </StyledWrapperView>
     );
   }

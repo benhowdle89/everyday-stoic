@@ -11,10 +11,6 @@ const StyledNavView = styled.View`
   padding-vertical: 10px;
 `;
 
-const StyledTodayButton = styled(Button)`
-  margin: 10px;
-`;
-
 export default class Nav extends Component {
   constructor(props) {
     super(props);
@@ -41,9 +37,9 @@ export default class Nav extends Component {
     const { otherDate } = this.props;
     return (
       <StyledNavView>
-        <StyledTodayButton onPress={this._handleTodayButtonPress}>
+        <Button withMargin onPress={this._handleTodayButtonPress}>
           Today
-        </StyledTodayButton>
+        </Button>
         <Button onPress={this._handleOtherDatePress}>Previous</Button>
         {!!this.state.showDatePicker && (
           <DatePicker

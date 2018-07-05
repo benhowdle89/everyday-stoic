@@ -6,6 +6,7 @@ const StyledButton = styled.TouchableOpacity`
   border: 1px solid #fff;
   border-radius: 10px;
   padding-horizontal: 10px;
+  margin-left: ${props => (props.withMargin ? "10px" : "0px")};
 `;
 
 const StyledButtonText = styled(Text)`
@@ -13,8 +14,8 @@ const StyledButtonText = styled(Text)`
   font-size: 12;
 `;
 
-export default ({ children, onPress }) => (
-  <StyledButton onPress={onPress}>
+export default ({ children, onPress, withMargin }) => (
+  <StyledButton withMargin onPress={onPress}>
     <StyledButtonText>{children.toUpperCase()}</StyledButtonText>
   </StyledButton>
 );
