@@ -10,10 +10,9 @@ export default class Picker extends Component {
   }
   render() {
     const { onChange, otherDate } = this.props;
-    console.log(otherDate);
     return (
       <DatePicker
-        style={{ width: 0, height: 0, flex: 0, right: -9999 }}
+        style={{ width: 0, height: 0, right: -9999 }}
         date={otherDate ? new Date(otherDate) : new Date()}
         mode="date"
         format="YYYY-MM-DD"
@@ -22,10 +21,6 @@ export default class Picker extends Component {
         maxDate={new Date()}
         showIcon={false}
         ref={ref => (this.datePickerRef = ref)}
-        customStyles={{
-          dateInput: {}
-          // ... You can check the source to find the other keys.
-        }}
         onDateChange={onChange}
       />
     );

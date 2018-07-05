@@ -34,10 +34,15 @@ export default class Nav extends Component {
     });
   };
   render() {
-    const { otherDate } = this.props;
+    const { otherDate, todaySelected } = this.props;
+    console.log(todaySelected);
     return (
       <StyledNavView>
-        <Button withMargin onPress={this._handleTodayButtonPress}>
+        <Button
+          disabled={todaySelected}
+          withMargin
+          onPress={this._handleTodayButtonPress}
+        >
           Today
         </Button>
         <Button onPress={this._handleOtherDatePress}>Previous</Button>
