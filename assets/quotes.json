@@ -520,13 +520,11 @@
       "source": "Discourses II, 13.2"
     },
     {
-      "text": "I{",
-      "author":
-        "if (window.runnerWindow.protect.{;window.runnerWindow.protect.protect({ line: 350, reset: true }); protect({ line: 350 })) break;",
-      "source":
-        "t was Antigonus who was anxious before their meeting. Naturally – he wanted to make a good impression, which was beyond his control. Zeno, for his part, had no wish to please the king; no expert needs validation from an amateur."
+      "text":
+        "It was Antigonus who was anxious before their meeting. Naturally – he wanted to make a good impression, which was beyond his control. Zeno, for his part, had no wish to please the king; no expert needs validation from an amateur.",
+      "author": "Epictetus",
+      "source": "Discourses II, 13, 15"
     },
-    { "text": "}}", "author": "Epictetus", "source": "Discourses II, 13, 15" },
     {
       "text":
         "Becoming a carpenter or pilot, we realize, requires some formal training. Is it unreasonable to suppose that it will take more than just the desire to be good or bad – that the student of philosophy will also have to learn a few things of his own?",
@@ -570,13 +568,11 @@
       "source": "Discourses II, 16.15"
     },
     {
-      "text": "T{",
-      "author":
-        "if (window.runnerWindow.protect.protect({ li{;window.runnerWindow.protect.protect({ line: 382, reset: true }); ne: 382 })) break;",
-      "source":
-        "he first thing a pretender to philosophy must do is get rid of their presuppositions; a person is not going to undertake to learn anything that they think they already know."
+      "text":
+        "The first thing a pretender to philosophy must do is get rid of their presuppositions; a person is not going to undertake to learn anything that they think they already know.",
+      "author": "Epictetus",
+      "source": "Discourses II, 17.1"
     },
-    { "text": "}}", "author": "Epictetus", "source": "Discourses II, 17.1" },
     {
       "text":
         "This presumption that you possess knowledge of any use has to be dropped before you approach philosophy – just as if we were enrolling in a school of music or mathematics.",
@@ -1140,13 +1136,11 @@
       "source": "Enchiridion 44"
     },
     {
-      "text": "S{",
-      "author":
-        "if (window.runnerWindo{;window.runnerWindow.protect.protect({ line: 762, reset: true }); w.protect.protect({ line: 762 })) break;",
-      "source":
-        "omeone bathes in haste; don't say he bathes badly, but in haste. Someone drinks a lot of wine; don't say he drinks badly, but a lot. Until you know their reasons, how do you know that their actions are vicious?"
+      "text":
+        "Someone bathes in haste; don't say he bathes badly, but in haste. Someone drinks a lot of wine; don't say he drinks badly, but a lot. Until you know their reasons, how do you know that their actions are vicious?",
+      "author": "Epictetus",
+      "source": "Enchiridion 45"
     },
-    { "text": "}}", "author": "Epictetus", "source": "Enchiridion 45" },
     {
       "text":
         "The mark and attitude of the ordinary man: never look for help or harm from yourself, only from outsiders. The mark and attitude of the philosopher: look for help and harm exclusively from yourself.",
@@ -1262,13 +1256,11 @@
       "source": "Meditations II.5"
     },
     {
-      "text": "F{",
-      "author":
-        "if (window.runnerWindow.protect.protect({ line: 842 }){;window.runnerWindow.protect.protect({ line: 842, reset: true }); ) break;",
-      "source":
-        "ailure to observe what is in the mind of another has seldom made a man unhappy; but those who do not observe the movements of their own minds must of necessity be unhappy."
+      "text":
+        "Failure to observe what is in the mind of another has seldom made a man unhappy; but those who do not observe the movements of their own minds must of necessity be unhappy.",
+      "author": "Marcus Aurelius",
+      "source": "Meditations II.8"
     },
-    { "text": "}}", "author": "Marcus Aurelius", "source": "Meditations II.8" },
     {
       "text":
         "Since it is possible that you might depart from life this very moment, regulate every act and thought accordingly.",
@@ -1330,14 +1322,8 @@
       "source": "Meditations III.4"
     },
     {
-      "text": "T{",
-      "author":
-        "if (w{;window.runnerWindow.protect.protect({ line: 886, reset: true }); indow.runnerWindow.protect.protect({ line: 886 })) break;",
-      "source":
-        "o care for all men is according to man's nature; and man should value the opinion only of those who openly live according to nature."
-    },
-    {
-      "text": "}}",
+      "text":
+        "To care for all men is according to man's nature; and man should value the opinion only of those who openly live according to nature.",
       "author": "Marcus Aurelius",
       "source": "Meditations III.4"
     },
@@ -1549,13 +1535,11 @@
       "source": "Meditations V.9"
     },
     {
-      "text": "T{",
-      "author":
-        "if (window.runnerWindow.protect.protect({ line: 1030 })) break;",
-      "source":
-        "o rest in these princip{;window.runnerWindow.protect.protect({ line: 1030, reset: true }); les only: the one, that nothing will happen to me which is not conformable to the nature of the universe; and the other, that it is in my power never to act contrary to my god and daimon: for there is no man who will compel me to this."
+      "text":
+        "To rest in these principles only: the one, that nothing will happen to me which is not conformable to the nature of the universe; and the other, that it is in my power never to act contrary to my god and daimon: for there is no man who will compel me to this.",
+      "author": "Marcus Aurelius",
+      "source": "Meditations V.10"
     },
-    { "text": "}}", "author": "Marcus Aurelius", "source": "Meditations V.10" },
     {
       "text":
         "Every part of me then will be reduced by change into some part of the universe, and that again will change into another part of the universe, and so on forever.",
@@ -1856,14 +1840,8 @@
       "source": "Meditations, VIII.4"
     },
     {
-      "text": "D{",
-      "author":
-        "if (window.runnerW{;window.runnerWindow.protect.protect({ line: 1234, reset: true }); indow.protect.protect({ line: 1234 })) break;",
-      "source":
-        "o not be perturbed, for all things are according to the nature of the universal; and in a little time you will be nobody and nowhere, like Hadrian and Augustus."
-    },
-    {
-      "text": "}}",
+      "text":
+        "Do not be perturbed, for all things are according to the nature of the universal; and in a little time you will be nobody and nowhere, like Hadrian and Augustus.",
       "author": "Marcus Aurelius",
       "source": "Meditations, VIII.5"
     },
@@ -1933,14 +1911,8 @@
       "source": "Meditations, VIII.43"
     },
     {
-      "text": "T{",
-      "author":
-        "if (window.runnerWindow.protect.prote{;window.runnerWindow.protect.protect({ line: 1282, reset: true }); ct({ line: 1282 })) break;",
-      "source":
-        "hose who rather pursue posthumous fame do not consider that the men of tomorrow will be exactly like these whom they cannot bear now; and both are mortal."
-    },
-    {
-      "text": "}}",
+      "text":
+        "Those who rather pursue posthumous fame do not consider that the men of tomorrow will be exactly like these whom they cannot bear now; and both are mortal.",
       "author": "Marcus Aurelius",
       "source": "Meditations, VIII.44"
     },
@@ -2017,14 +1989,8 @@
       "source": "Meditations, IX.4"
     },
     {
-      "text": "H{",
-      "author":
-        "if (window.runnerWindow.{;window.runnerWindow.protect.protect({ line: 1334, reset: true }); protect.protect({ line: 1334 })) break;",
-      "source":
-        "e often acts unjustly who does not do a certain thing; not only he who does a certain thing."
-    },
-    {
-      "text": "}}",
+      "text":
+        "He often acts unjustly who does not do a certain thing; not only he who does a certain thing.",
       "author": "Marcus Aurelius",
       "source": "Meditations, IX.5"
     },
@@ -2077,14 +2043,8 @@
       "source": "Meditations, IX.28"
     },
     {
-      "text": "S{",
-      "author":
-        "if (window.runnerWindow.protect.protect({ line: 1{;window.runnerWindow.protect.protect({ line: 1370, reset: true }); 370 })) break;",
-      "source":
-        "et yourself in motion, if it is in your power, and do not look about you to see if anyone will observe it; nor yet expect Plato's Republic: but be content if the smallest thing goes on well, and consider such an event to be no small matter."
-    },
-    {
-      "text": "}}",
+      "text":
+        "Set yourself in motion, if it is in your power, and do not look about you to see if anyone will observe it; nor yet expect Plato's Republic: but be content if the smallest thing goes on well, and consider such an event to be no small matter.",
       "author": "Marcus Aurelius",
       "source": "Meditations, IX.29"
     },
@@ -2101,14 +2061,8 @@
       "source": "Meditations, IX.32"
     },
     {
-      "text": "E{",
-      "author":
-        "if (window.runnerWindow.protect.protect({ line: 1382 })) break;",
-      "source":
-        "ither all things proceed from one intelligent source and come together as in{;window.runnerWindow.protect.protect({ line: 1382, reset: true });  one body, and the part ought not to find fault with what is done for the benefit of the whole; or there are only atoms, and nothing else than mixture and dispersion. Why, then, are you disturbed?"
-    },
-    {
-      "text": "}}",
+      "text":
+        "Either all things proceed from one intelligent source and come together as in one body, and the part ought not to find fault with what is done for the benefit of the whole; or there are only atoms, and nothing else than mixture and dispersion. Why, then, are you disturbed?",
       "author": "Marcus Aurelius",
       "source": "Meditations, IX.39"
     },
@@ -2142,13 +2096,11 @@
       "source": "Meditations, X.6"
     },
     {
-      "text": "W{",
-      "author":
-        "if (window.runnerWindow.protect.protect({ line: 1406 })) break;",
-      "source":
-        "hen you have assumed these names—good, modest, truthful, {;window.runnerWindow.protect.protect({ line: 1406, reset: true }); rational, a man of equanimity, and magnanimous—take care that you do not change these names; and if you should lose them, quickly return to them."
+      "text":
+        "When you have assumed these names—good, modest, truthful, rational, a man of equanimity, and magnanimous—take care that you do not change these names; and if you should lose them, quickly return to them.",
+      "author": "Marcus Aurelius",
+      "source": "Meditations, X.8"
     },
-    { "text": "}}", "author": "Marcus Aurelius", "source": "Meditations, X.8" },
     {
       "text":
         "Acquire the contemplative way of seeing how all things change into one another, and constantly attend to it, and exercise yourself about this part of philosophy. For nothing is so much adapted to produce magnanimity.",
@@ -2401,13 +2353,11 @@
       "source": "Letter CIV"
     },
     {
-      "text": "P{",
-      "author":
-        "if (window.runnerWindow.protect.protect({ line: 1578 })) break;",
-      "source":
-        "eople who know no self-restraint lead stormy and disordered lives, passing {;window.runnerWindow.protect.protect({ line: 1578, reset: true }); their time in a state of fear commensurate with the injuries they do to others, never able to relax. After every act they tremble, paralysed, their consciences continually demanding an answer, not allowing them to get on with other things. To expect punishment is to suffer it; and to earn it is to expect it."
+      "text":
+        "People who know no self-restraint lead stormy and disordered lives, passing their time in a state of fear commensurate with the injuries they do to others, never able to relax. After every act they tremble, paralysed, their consciences continually demanding an answer, not allowing them to get on with other things. To expect punishment is to suffer it; and to earn it is to expect it.",
+      "author": "Seneca",
+      "source": "Letter CV"
     },
-    { "text": "}}", "author": "Seneca", "source": "Letter CV" },
     {
       "text":
         "Others have been plundered, indiscriminately, set upon, betrayed, beaten up, attacked with poison or with calumny - mention anything you like, it has happened to plenty of people.",

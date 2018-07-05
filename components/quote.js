@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Share } from "react-native";
+import { View, Share, ScrollView } from "react-native";
 import styled from "styled-components";
 import format from "date-fns/format";
 import { Ionicons } from "@expo/vector-icons";
@@ -24,6 +24,7 @@ const MetaView = styled.View`
   justify-content: space-between;
   flex-direction: row;
   margin-top: 30;
+  margin-bottom: 20;
 `;
 
 const QuoteAuthorText = styled(Text)`
@@ -51,6 +52,10 @@ const ButtonsView = styled.View`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+`;
+
+const StyledScrollView = styled.ScrollView`
+  flex: 0.75;
 `;
 
 const formatDate = date => {
@@ -109,13 +114,16 @@ export default class Quote extends Component {
     return (
       <StyledBGView {...this.props}>
         <DateText {...this.props}>{formatDate(otherDate)}</DateText>
-        <QuoteText {...this.props}>{text}</QuoteText>
+        <StyledScrollView>
+          <QuoteText {...this.props}>{text}</QuoteText>
+        </StyledScrollView>
         <MetaView>
           <QuoteAuthorText {...this.props}>
             {author.toUpperCase()}
           </QuoteAuthorText>
           <QuoteSourceText {...this.props}>{source}</QuoteSourceText>
         </MetaView>
+
         <ButtonsView>
           <StyledThemeButton onPress={this._handleThemePress}>
             <Ionicons name="ios-color-palette" size={32} color={theme.text} />
