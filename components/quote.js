@@ -122,8 +122,11 @@ export default class Quote extends Component {
           </StyledThemeButton>
           <StyledThemeButton
             onPress={() => this._share({ text, author, source })}
+            style={{
+              marginTop: -3
+            }}
           >
-            <Ionicons name="ios-share" size={32} color={theme.text} />
+            <Ionicons name="ios-share" size={38} color={theme.text} />
           </StyledThemeButton>
           <StyledThemeButton onPress={this._handleInfoPress}>
             <Ionicons
