@@ -1,22 +1,35 @@
 import React, { Component } from "react";
 import { View } from "react-native";
+import { Constants } from "expo";
 import { connect } from "react-redux";
-import getCurrentQuote, { getCurrentTheme } from "./../lib/selectors";
-import Quote from "./../components/quote";
 import styled from "styled-components";
+
+const { statusBarHeight } = Constants;
+import getCurrentQuote, { getCurrentTheme } from "./../lib/selectors";
+import { setToday, setOtherDate } from "./../lib/reducer";
+
+import Quote from "./../components/quote";
+import Nav from "./../components/nav";
 
 const StyledWrapperView = styled.View`
   flex: 1;
-  align-items: center;
-  justify-content: center;
-  margin-horizontal: -10;
+`;
+
+const StatusBarPaddingIOS = styled.View`
+  height: ${statusBarHeight};
 `;
 
 class Home extends Component {
   render() {
-    const { quote, theme } = this.props;
+    const { quote, theme, setOtherDate, setToday, otherDate } = this.props;
     return (
       <StyledWrapperView>
+        <StatusBarPaddingIOS />
+        <Nav
+          otherDate={otherDate}
+          setOtherDate={setOtherDate}
+          setToday={setToday}
+        />
         <Quote theme={theme} quote={quote} />
       </StyledWrapperView>
     );
@@ -24,15 +37,24 @@ class Home extends Component {
 }
 
 const mapStateToProps = state => {
-  const currentQuote = getCurrentQuote(state);
-  const { theme } = state;
+  const { theme, todaySelected, otherDate } = state;
+  const currentQuote = getCurrentQuote(
+    state,
+    !todaySelected && otherDate ? otherDate : undefined
+  );
   return {
     quote: currentQuote,
-    theme: getCurrentTheme(state, theme)
+    theme: getCurrentTheme(state, theme),
+    otherDate
   };
+};
+
+const mapDispatchToProps = {
+  setToday,
+  setOtherDate
 };
 
 export default connect(
   mapStateToProps,
-  null
+  mapDispatchToProps
 )(Home);

@@ -1,0 +1,57 @@
+import React, { Component } from "react";
+import styled from "styled-components";
+import Button from "./button";
+import DatePicker from "./date-picker";
+
+const StyledNavView = styled.View`
+  justify-content: flex-end;
+  flex-direction: row;
+  background: #000;
+  padding-horizontal: 10px;
+  padding-vertical: 10px;
+`;
+
+const StyledTodayButton = styled(Button)`
+  margin: 10px;
+`;
+
+export default class Nav extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      showDatePicker: false
+    };
+  }
+  _handleTodayButtonPress = () => {
+    this.props.setToday();
+  };
+  _handleOtherDatePress = () => {
+    this.setState({
+      showDatePicker: true
+    });
+  };
+  _handleDatePickerDateChange = date => {
+    this.props.setOtherDate(date);
+    this.setState({
+      showDatePicker: false
+    });
+  };
+  render() {
+    const { otherDate } = this.props;
+    return (
+      <StyledNavView>
+        <StyledTodayButton onPress={this._handleTodayButtonPress}>
+          Today
+        </StyledTodayButton>
+        <Button onPress={this._handleOtherDatePress}>Previous</Button>
+        {!!this.state.showDatePicker && (
+          <DatePicker
+            otherDate={otherDate}
+            onChange={this._handleDatePickerDateChange}
+          />
+        )}
+      </StyledNavView>
+    );
+  }
+}
