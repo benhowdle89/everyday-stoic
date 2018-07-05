@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View } from "react-native";
+import { View, Share } from "react-native";
 import styled from "styled-components";
 import format from "date-fns/format";
 import { Ionicons } from "@expo/vector-icons";
@@ -49,6 +49,8 @@ const ButtonsView = styled.View`
   align-self: center;
   margin-top: 60;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
 `;
 
 const formatDate = date => {
@@ -87,6 +89,14 @@ export default class Quote extends Component {
       showInfoModal: false
     });
   };
+  _share = ({ text, author, source }) => {
+    const message = `${text} - ${author}, ${source}`;
+    Share.share({
+      message,
+      title: "Everyday Stoic",
+      url: "https://benhowdle.im/everyday-stoic"
+    });
+  };
   render() {
     const {
       quote: { text, author, source },
@@ -109,6 +119,11 @@ export default class Quote extends Component {
         <ButtonsView>
           <StyledThemeButton onPress={this._handleThemePress}>
             <Ionicons name="ios-color-palette" size={32} color={theme.text} />
+          </StyledThemeButton>
+          <StyledThemeButton
+            onPress={() => this._share({ text, author, source })}
+          >
+            <Ionicons name="ios-share" size={32} color={theme.text} />
           </StyledThemeButton>
           <StyledThemeButton onPress={this._handleInfoPress}>
             <Ionicons

@@ -10,6 +10,7 @@ const StyledModalView = styled.View`
   flex: 0.75;
   background: #ddd;
   padding: 20px;
+  padding-bottom: 40px;
 `;
 
 const HeadingText = styled(Text)`
