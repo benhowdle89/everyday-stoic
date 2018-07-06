@@ -1,12 +1,20 @@
 import React, { Component } from "react";
-import { View } from "react-native";
+import { View, AppState } from "react-native";
 import { Constants } from "expo";
 import { connect } from "react-redux";
 import styled from "styled-components";
 
 const { statusBarHeight } = Constants;
 import getCurrentQuote, { getCurrentTheme } from "./../lib/selectors";
-import { setToday, setOtherDate, setNewTheme } from "./../lib/reducer";
+import {
+  setToday,
+  setOtherDate,
+  setNewTheme,
+  setDay,
+  updateNewQuote
+} from "./../lib/reducer";
+
+import { dateToString, isDifferentDays } from "./../lib/helpers";
 
 import Quote from "./../components/quote";
 import Nav from "./../components/nav";
@@ -21,6 +29,53 @@ const StatusBarPaddingIOS = styled.View`
 `;
 
 class Home extends Component {
+  state = {
+    appState: AppState.currentState,
+    timer: null
+  };
+
+  componentDidMount() {
+    AppState.addEventListener("change", this._handleAppStateChange);
+    const { setDay } = this.props;
+    setDay(new Date());
+    this._checkNewDay();
+    this._startTimer();
+  }
+
+  componentWillUnmount() {
+    AppState.removeEventListener("change", this._handleAppStateChange);
+    clearInterval(this.state.timer);
+  }
+
+  _handleAppStateChange = nextAppState => {
+    if (
+      this.state.appState.match(/inactive|background/) &&
+      nextAppState === "active" &&
+      !this.props.otherDate
+    ) {
+      this.props.updateNewQuote();
+    }
+    this.setState({ appState: nextAppState });
+  };
+  _startTimer() {
+    this.setState({
+      timer: setInterval(() => {
+        this._checkNewDay();
+      }, 30 * 1000)
+    });
+  }
+  _checkNewDay() {
+    const { setDay, today, otherDate, updateNewQuote } = this.props;
+    console.log("checking...");
+    if (isDifferentDays(today, new Date())) {
+      console.log("setting new day");
+      setDay(new Date());
+      if (!otherDate) {
+        console.log("setting new quote");
+        updateNewQuote();
+      }
+    }
+  }
   render() {
     const {
       quote,
@@ -56,7 +111,7 @@ class Home extends Component {
 }
 
 const mapStateToProps = state => {
-  const { theme, todaySelected, otherDate, themes } = state;
+  const { theme, todaySelected, otherDate, themes, today } = state;
   const currentQuote = getCurrentQuote(
     state,
     !todaySelected && otherDate ? otherDate : undefined
@@ -67,14 +122,17 @@ const mapStateToProps = state => {
     otherDate,
     themes,
     currentThemeIndex: theme,
-    todaySelected
+    todaySelected,
+    today
   };
 };
 
 const mapDispatchToProps = {
   setToday,
   setOtherDate,
-  setNewTheme
+  setNewTheme,
+  setDay,
+  updateNewQuote
 };
 
 export default connect(
