@@ -2,14 +2,14 @@ import React, { Component } from "react";
 import DatePicker from "react-native-datepicker";
 
 export default class Picker extends Component {
-  componentDidMount() {
-    this.datePickerRef.onPressDate();
-  }
-  componentDidUpdate() {
-    this.datePickerRef.onPressDate();
-  }
+  componentDidUpdate = nextProps => {
+    if ((this.props.show || nextProps.show) && this.datePickerRef) {
+      this.datePickerRef.onPressDate();
+    }
+  };
   render() {
-    const { onChange, otherDate } = this.props;
+    const { onChange, otherDate, show } = this.props;
+    if (!show) return null;
     return (
       <DatePicker
         style={{ width: 0, height: 0, right: -9999 }}
@@ -22,6 +22,8 @@ export default class Picker extends Component {
         showIcon={false}
         ref={ref => (this.datePickerRef = ref)}
         onDateChange={onChange}
+        onCloseModal={onChange}
+        onPressMask={onChange}
         customStyles={{
           btnTextConfirm: {
             color: "#111",

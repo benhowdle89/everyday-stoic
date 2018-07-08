@@ -28,7 +28,7 @@ export default class Nav extends Component {
     });
   };
   _handleDatePickerDateChange = date => {
-    this.props.setOtherDate(date);
+    if (date) this.props.setOtherDate(date);
     this.setState({
       showDatePicker: false
     });
@@ -45,12 +45,11 @@ export default class Nav extends Component {
           Today
         </Button>
         <Button onPress={this._handleOtherDatePress}>Past</Button>
-        {!!this.state.showDatePicker && (
-          <DatePicker
-            otherDate={otherDate}
-            onChange={this._handleDatePickerDateChange}
-          />
-        )}
+        <DatePicker
+          otherDate={otherDate}
+          onChange={this._handleDatePickerDateChange}
+          show={this.state.showDatePicker}
+        />
       </StyledNavView>
     );
   }
